@@ -1,6 +1,6 @@
-package service;
+package foo.bar.service;
 
-import domain.Suggestion;
+import foo.bar.domain.Suggestion;
 import lombok.Data;
 import lombok.NonNull;
 import org.springframework.stereotype.Component;

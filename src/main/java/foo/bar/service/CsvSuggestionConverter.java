@@ -1,7 +1,7 @@
-package service;
+package foo.bar.service;
 
-import domain.Suggestion;
-import dto.CsvSuggestionDto;
+import foo.bar.domain.Suggestion;
+import foo.bar.dto.CsvSuggestionDto;
 import lombok.NonNull;
 import org.springframework.stereotype.Component;
 

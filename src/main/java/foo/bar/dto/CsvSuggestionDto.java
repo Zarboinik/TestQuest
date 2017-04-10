@@ -1,4 +1,4 @@
-package dto;
+package foo.bar.dto;
 
 import lombok.Data;
 

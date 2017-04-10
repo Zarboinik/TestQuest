@@ -1,20 +1,22 @@
+package foo.bar;
+
 import com.google.common.collect.ImmutableList;
-import service.SuggestionService;
+import foo.bar.service.SuggestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
-import service.CsvSuggestionConverter;
-import service.CsvSuggestionWriter;
+import foo.bar.service.CsvSuggestionConverter;
+import foo.bar.service.CsvSuggestionWriter;
 
 import static java.util.stream.Collectors.collectingAndThen;
 import static java.util.stream.Collectors.toList;
 
 
 @SpringBootApplication
-@ComponentScan(value = "service")
+@ComponentScan(value = "foo.bar")
 public class Application implements CommandLineRunner {
     @Autowired
     private CsvSuggestionWriter csvSuggestionWriter;
@@ -38,4 +40,5 @@ public class Application implements CommandLineRunner {
                 .map(csvSuggestionConverter::toCsvSuggestionDto)
                 .collect(collectingAndThen(toList(), ImmutableList::copyOf)));
     }
+
 }

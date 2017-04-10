@@ -1,8 +1,8 @@
-package service;
+package foo.bar.service;
 
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
-import dto.CsvSuggestionDto;
+import foo.bar.dto.CsvSuggestionDto;
 import lombok.Cleanup;
 import lombok.NonNull;
 import org.springframework.stereotype.Component;
